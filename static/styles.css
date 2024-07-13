@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.glowing-text {
+    color: #39FF14; /* Neon green */
+    text-shadow: 0 0 5px #39FF14, 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 40px #39FF14, 0 0 80px #39FF14;
+    white-space: pre-line; /* Preserve line breaks */
+    font-size: 2em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the space between buttons */
+    margin-top: 20px; /* Space from the text above */
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.cursor {
+    display: inline-block;
+    background-color: white;
+    width: 20px; /* Adjusted width for underscore appearance */
+    height: 4px; /* Adjusted height */
+    vertical-align: bottom; /* Align to the bottom of the text */
+    animation: blink 1s step-end infinite;
+}
